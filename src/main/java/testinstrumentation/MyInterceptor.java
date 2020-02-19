@@ -13,7 +13,7 @@ public class MyInterceptor extends Interceptor {
 
     @Override
     public boolean interceptClass(String className, byte[] byteCode) {
-        return true; // all classes can be intrumented
+        return className.endsWith("SimpleClass"); // all classes can be intrumented
     }
 
     @Override

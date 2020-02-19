@@ -4,7 +4,7 @@
   <artifactId>javainstrumentation</artifactId>
   <version>1.0</version>
   <name>Java Instrumentation</name>
-  
+
   <dependencies>
 	  <dependency>
 		  <groupId>org.brutusin</groupId>
@@ -18,5 +18,50 @@
 	      <version>6.2</version>
     	</dependency>
   </dependencies>
-  
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<descriptorRefs>
+						<descriptorRef>jar-with-dependencies</descriptorRef>
+					</descriptorRefs>
+					<appendAssemblyId>true</appendAssemblyId>
+					<archive>
+						<manifestEntries>
+							<Premain-Class>org.brutusin.instrumentation.Agent</Premain-Class>
+						</manifestEntries>
+					</archive>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>default-test</id>
+						<phase>none</phase>
+					</execution>
+					<execution>
+						<id>test-package</id>
+						<phase>package</phase>
+						<goals>
+							<goal>test</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<argLine>-javaagent:${project.build.directory}/${project.artifactId}-${project.version}-jar-with-dependencies.${project.packaging}=org.brutusin.instrumentation.logging.LoggingInterceptor;${java.io.tmpdir}/${project.artifactId}-tests</argLine>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 </project>
