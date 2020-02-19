@@ -1,3 +1,9 @@
+package testinstrumentation;
+
+import org.brutusin.instrumentation.Interceptor;
+import org.objectweb.asm.tree.ClassNode;
+import org.objectweb.asm.tree.MethodNode;
+
 public class MyInterceptor extends Interceptor {
 
     @Override
@@ -16,22 +22,22 @@ public class MyInterceptor extends Interceptor {
     }
 
     @Override
-    protected void doOnStart(Method m, Object[] arg, String executionId) {
+    protected void doOnStart(Object m, Object[] arg, String executionId) {
         System.out.println("doOnStart " + m + " " + executionId);
     }
 
     @Override
-    protected void doOnThrowableThrown(Method m, Throwable throwable, String executionId) {
+    protected void doOnThrowableThrown(Object m, Throwable throwable, String executionId) {
         System.out.println("doOnThrowableThrown " + m + " " + executionId);
     }
 
     @Override
-    protected void doOnThrowableUncatched(Method m, Throwable throwable, String executionId) {
+    protected void doOnThrowableUncatched(Object m, Throwable throwable, String executionId) {
         System.out.println("doOnThrowableUncatched " + m + " " + executionId);
     }
 
     @Override
-    protected void doOnFinish(Method m, Object result, String executionId) {
+    protected void doOnFinish(Object m, Object result, String executionId) {
         System.out.println("doOnFinish " + m + " " + executionId);
     }
 }

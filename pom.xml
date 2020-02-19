@@ -1,13 +1,22 @@
-<project>
-    <artifactId>javaInstrumentation</artifactId>
-    <version>1.0</version>
-    <modelVersion>4.0.0</modelVersion>
-    <groupId>testInstrumentation</groupId>
-    ​
-    <dependencies>
-        <dependency>
-            <groupId>org.brutusin</groupId>
-            <artifactId>instrumentation</artifactId>
-        </dependency>
-    </dependencies>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.ics.uci.edu</groupId>
+  <artifactId>javainstrumentation</artifactId>
+  <version>1.0</version>
+  <name>Java Instrumentation</name>
+  
+  <dependencies>
+	  <dependency>
+		  <groupId>org.brutusin</groupId>
+		  <artifactId>instrumentation</artifactId>
+		  <version>1.0.0</version>
+	  </dependency>
+	  
+	   <dependency>
+	      <groupId>org.apache.bcel</groupId>
+	      <artifactId>bcel</artifactId>
+	      <version>6.2</version>
+    	</dependency>
+  </dependencies>
+  
 </project>
