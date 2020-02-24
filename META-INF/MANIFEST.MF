@@ -1,5 +1,0 @@
-Class-Path: ./src/main/java
-Premain-Class: org.brutusin.instrumentation.Agent
-Can-Retransform-Classes: true
-Can-Redefine-Classes: true
-Main-Class: testinstrumentation.SimpleClass
