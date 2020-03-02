@@ -1,1 +1,2 @@
-Premain-Class: testinstrumentation.DependencyInstrumentation
+Manifest-Version: 1.0
+Premain-Class: testinstrumentation.SimpleMain
