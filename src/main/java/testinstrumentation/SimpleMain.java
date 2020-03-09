@@ -1,7 +1,8 @@
 package testinstrumentation;
 
 import java.util.HashMap;
-
+import testinstrumentation.Test;
+import testinstrumentation.Dog;
 public class SimpleMain {
     public static void main(String [] args) {
         System.out.println("Printing in main");
@@ -10,7 +11,7 @@ public class SimpleMain {
         h.put("hello", "here");
         s.f();
         Test t = new Test();
-        t.methodOne();
+        Dog d = new Dog();
     }
 
     public void f() {

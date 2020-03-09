@@ -5,3 +5,8 @@ public class Test {
         System.out.println("Method One");
     }
 }
+class Dog {
+    public void methodOne() {
+        System.out.println("Dog Method One");
+    }
+}
