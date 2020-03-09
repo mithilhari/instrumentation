@@ -1,9 +1,20 @@
 package testinstrumentation;
 
-import java.lang.instrument.Instrumentation;
+import java.util.HashMap;
 
 public class SimpleMain {
-    public static void premain(String agentArguments, Instrumentation instrumentation) {
-        instrumentation.addTransformer(new SimpleTransformer());
+    public static void main(String [] args) {
+        System.out.println("Printing in main");
+        SimpleMain s = new SimpleMain();
+        HashMap<String,String> h = new HashMap<String,String>();
+        h.put("hello", "here");
+        s.f();
+        Test t = new Test();
+        t.methodOne();
     }
+
+    public void f() {
+        System.out.println("Printing in f");
+    }
+
 }

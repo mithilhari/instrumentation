@@ -11,6 +11,11 @@
 		  <artifactId>javassist</artifactId>
 		  <version>3.12.1.GA</version>
 	  </dependency>
+	  <dependency>
+		  <groupId>org.apache.bcel</groupId>
+		  <artifactId>bcel</artifactId>
+		  <version>6.4.0</version>
+	  </dependency>
   </dependencies>
 	<build>
 		<plugins>
