@@ -5,7 +5,7 @@ public class Test {
         System.out.println("Method One");
     }
 }
-class Dog {
+class Dog extends Test{
     public void methodOne() {
         System.out.println("Dog Method One");
     }
