@@ -11,7 +11,7 @@ Compile classes
 
 To create jar
 
-`jar cvfm agent.jar MANIFEST.mf .
+`jar cvfm agent.jar MANIFEST.mf .`
 
 Run agent
 
