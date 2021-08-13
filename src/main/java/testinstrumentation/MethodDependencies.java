@@ -4,8 +4,6 @@ import javassist.*;
 
 import java.security.*;
 import java.lang.instrument.*;
-import java.util.*;
-import javassist.*;
 
 public class MethodDependencies implements ClassFileTransformer {
 

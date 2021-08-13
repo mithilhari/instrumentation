@@ -1,2 +1,4 @@
 Boot-Class-Path: javassist.jar
 Premain-Class: testinstrumentation.TestMain
+Main-Class: testinstrumentation.SimpleMain
+Class-Path: src/main/java/testinstrumentation/agent.jar
