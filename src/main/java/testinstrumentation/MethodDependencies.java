@@ -40,6 +40,7 @@ public class MethodDependencies implements ClassFileTransformer {
     private void changeMethod(CtBehavior method) throws NotFoundException, CannotCompileException {
         if (!Modifier.isNative(method.getModifiers())) {
             String insertString = "System.out.println(\"started method " + method.getName() + "\");";
+            System.out.println(insertString);
             method.insertBefore(insertString);
         }
     }

@@ -12,6 +12,7 @@ public class SimpleMain {
         s.f();
         Test t = new Test();
         Dog d = new Dog();
+        t.methodOne();
     }
 
     public void f() {
